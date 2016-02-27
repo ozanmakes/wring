@@ -1,0 +1,42 @@
+{
+  "name": "wring",
+  "version": "1.0.0",
+  "moduleType": [
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output",
+    "flycheck_output"
+  ],
+  "dependencies": {
+    "purescript-console": "^0.1.0",
+    "purescript-yargs": "^0.7.2",
+    "purescript-phantomjs": "https://github.com/osener/purescript-phantomjs.git#cd5f8ad074d32f6e59536bc5ac9713df6e13785e",
+    "purescript-ansi": "^0.1.3",
+    "purescript-affjax": "https://github.com/osener/purescript-affjax.git#d1d8109b81a8e0d2ef4dbaf3486c144634aba21a",
+    "purescript-spec": "^0.7.2",
+    "purescript-spec-quickcheck": "^0.3.0",
+    "purescript-node-fs": "^0.10.0",
+    "purescript-nullable": "^0.2.1",
+    "purescript-node-url": "^0.1.1",
+    "purescript-node-child-process": "^0.5.1",
+    "purescript-node-path": "^0.4.1",
+    "purescript-node-process": "^0.4.1",
+    "purescript-globals": "^0.2.2",
+    "purescript-argonaut": "^0.12.0",
+    "purescript-foldable-traversable": "^0.4.2",
+    "purescript-node-streams": "^0.3.0",
+    "purescript-refs": "^0.2.0",
+    "purescript-node-fs-aff": "^0.3.0"
+  },
+  "resolutions": {
+    "purescript-aff": "^0.13.0",
+    "purescript-maps": "^0.5.0",
+    "purescript-spec": "^0.7.2",
+    "purescript-strings": "^0.7.0",
+    "purescript-transformers": "^0.8.1"
+  }
+}

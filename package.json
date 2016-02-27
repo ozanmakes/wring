@@ -1,0 +1,65 @@
+{
+  "name": "wring",
+  "version": "1.0.0",
+  "description": "Extract content from websites using CSS Selectors and XPath",
+  "author": "Ozan Sener",
+  "license": "MIT",
+  "homepage": "https://github.com/osener/wring#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osener/wring.git"
+  },
+  "bugs": {
+    "url": "https://github.com/osener/wring/issues"
+  },
+  "keywords": [
+    "cheerio",
+    "html",
+    "scrape",
+    "css",
+    "selector",
+    "xpath",
+    "jquery",
+    "phantomjs",
+    "web",
+    "scraper",
+    "screenshot"
+  ],
+  "bin": {
+    "wring": "index.js"
+  },
+  "main": "wring.js",
+  "files": [
+    "index.js",
+    "wring.js",
+    "phantomjs-main.js",
+    "resources/jquery.js"
+  ],
+  "preferGlobal": true,
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "compile": "pulp build --to main.js && pulp build --main PhantomjsMain --to phantomjs-main.js",
+    "bundle": "browserify main.js --node --dg false -x phantomjs-prebuilt -o wring.js",
+    "minify": "uglifyjs wring.js --compress warnings=false --mangle --screw-ie8 -o wring.js",
+    "build": "npm run compile && npm run bundle",
+    "test": "npm run build && pulp build -I test --main Test.Main --to output/test.js && sh run_tests.sh",
+    "prepublish": "bower install && npm run build && npm run minify"
+  },
+  "devDependencies": {
+    "babel-polyfill": "^6.5.0",
+    "babel-preset-es2015": "^6.5.0",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
+    "cheerio": "^0.20.0",
+    "dom-serializer": "github:osener/dom-serializer#9906383f3b8e83e0f42dd6b8a01961616ebf844e",
+    "entities": "^1.1.1",
+    "pulp": "^8.0.0",
+    "purescript": "^0.8.0",
+    "xhr2": "^0.1.3",
+    "xmldom": "^0.1.22",
+    "xpath": "0.0.21",
+    "yargs": "^4.1.0"
+  }
+}
