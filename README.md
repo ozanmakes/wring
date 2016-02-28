@@ -3,7 +3,7 @@
 # ![](resources/media/img2.png) wring
 
 ## Installation
-You can install wring using [npm](https://www.npmjs.com/#getting-started):
+You can install wring using [npm](https://www.npmjs.com/package/wring/tutorial):
 
 ```sh
 $ npm install --global wring
